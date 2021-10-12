@@ -21,8 +21,6 @@ services:
       - ./e2e/cypress.json:/app/cypress.json
     ipc: host
     network_mode: host
-    networks:
-      - app-network
 
 networks:
   app-network:
