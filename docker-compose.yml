@@ -19,6 +19,8 @@ services:
     volumes:
       - ./e2e/cypress:/app/cypress
       - ./e2e/cypress.json:/app/cypress.json
+    ipc: host
+    network_mode: host
     networks:
       - app-network
 
