@@ -14,13 +14,13 @@ services:
     depends_on:
       - web
     environment:
-      - CYPRESS_baseUrl=http://web/plop
+      - CYPRESS_baseUrl=http://s00i105i.bcaexpertise.org:7777/plop
     command: npx cypress run
     volumes:
       - ./e2e/cypress:/app/cypress
       - ./e2e/cypress.json:/app/cypress.json
-    ipc: host
-    network_mode: host
+    networks:
+      - app-network
 
 networks:
   app-network:
